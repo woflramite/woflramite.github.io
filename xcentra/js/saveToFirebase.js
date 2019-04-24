@@ -13,4 +13,4 @@ function saveToFirebase(email,name) {
         });
 }
 
-saveToFirebase(email);
+saveToFirebase(email,name);
