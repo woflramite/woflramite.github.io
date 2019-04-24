@@ -97,7 +97,17 @@
     <!-- ================ go get us section end ================= -->
 
   <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
-  <script src="js/other.js"></script>
+  <script>
+    var config = {
+      apiKey: "AIzaSyAwUvM3lPpK9U5LN5GNcNyUo13z4alVkvc",
+      authDomain: "xcentra-mailing-list.firebaseapp.com",
+      databaseURL: "https://xcentra-mailing-list.firebaseio.com",
+      projectId: "xcentra-mailing-list",
+      storageBucket: "xcentra-mailing-list.appspot.com",
+      messagingSenderId: "49675923395"
+    };
+    firebase.initializeApp(config);
+  </script>
   <script src="js/saveToFirebase.js"></script>
   <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
   <script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
