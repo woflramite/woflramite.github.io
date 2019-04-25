@@ -1,16 +1,21 @@
-function saveToFirebase(email,name) {
+function saveToFirebase() {
+    var email = document.getElementById("email_form").value
+    var name = document.getElementById("name_form").value
     var guestObject = {
-        email: email;
+        email: email,
         name: name
     };
 
-    firebase.database().ref('subscription-entries').push().set(guestObject)
-        .then(function(snapshot) {
-            success(); // some success method
-        }, function(error) {
-            console.log('error' + error);
-            error(); // some error method
-        });
+    console.log(email);
+    console.log(name);
+    pushToFirebase(guestObject);
 }
 
-saveToFirebase(email,name);
+
+function pushToFirebase(guestObject) {
+    console.log("Start pushing to Firebase");
+    firebase.database().ref('subscription-entries').push().set(guestObject);
+    console.log("Pushing to Firebase is completed!")
+}
+
+saveToFirebase()

@@ -18,6 +18,10 @@
 
   <link rel="stylesheet" href="css/style.css">
 </head>
+
+
+
+
 <body>
   <!-- ================ start header Area ================= -->  
 	<header class="header_area sticky-header">
@@ -77,11 +81,11 @@
               <h3 class="card-service__title">Download Here!</h3>
               <p>We would like thank you for your enthusiasm, but we're not ready yet. Fill in this subscription form and we will hit you up if we're ready</p>
               <div>
-              	<form>
-              		<input type="text" id="name" name="name" style="border-radius: 100px; padding: 10px; width: 80%" placeholder="Name"> <br>
-              		<input type="email" id="email" name="email" style="border-radius: 100px; padding: 10px; width: 80%" placeholder="E-mail Address" autocomplete="on" required> <br> <br>
-              		<input type="submit" class="button button-service" value="Let me know!" id="submit">
-              	</form>
+                <form id="subs_form">
+            		  <input id="name_form" type="text" style="border-radius: 100px; padding: 10px; width: 80%" placeholder="Name"> <br>
+            		  <input id="email_form" type="email" style="border-radius: 100px; padding: 10px; width: 80%" placeholder="E-mail Address" autocomplete="on" required> <br> <br>
+            		  <button type="submit" class="button button-service" onclick="saveToFirebase()">Let me know!</button>
+                </form>
               </div>
             </div>
           </div>
@@ -96,28 +100,29 @@
     </section>
     <!-- ================ go get us section end ================= -->
 
-  <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
-  <script>
-    var config = {
-      apiKey: "AIzaSyAwUvM3lPpK9U5LN5GNcNyUo13z4alVkvc",
-      authDomain: "xcentra-mailing-list.firebaseapp.com",
-      databaseURL: "https://xcentra-mailing-list.firebaseio.com",
-      projectId: "xcentra-mailing-list",
-      storageBucket: "xcentra-mailing-list.appspot.com",
-      messagingSenderId: "49675923395"
-    };
-    firebase.initializeApp(config);
-  </script>
-  <script src="js/saveToFirebase.js"></script>
-  <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
-  <script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
-  <script src="vendors/OwlCarousel/owl.carousel.min.js"></script>
-  <script src="vendors/sticky/jquery.sticky.js"></script>
-  <script src="js/jquery.ajaxchimp.min.js"></script>
-	<script src="js/mail-script.js"></script>
-  <script src="vendors/Magnific-Popup/jquery.magnific-popup.min.js"></script>	
-  <script src="js/main.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+    <script>
+      var config = {
+        apiKey: "AIzaSyAwUvM3lPpK9U5LN5GNcNyUo13z4alVkvc",
+        authDomain: "xcentra-mailing-list.firebaseapp.com",
+        databaseURL: "https://xcentra-mailing-list.firebaseio.com",
+        projectId: "xcentra-mailing-list",
+        storageBucket: "xcentra-mailing-list.appspot.com",
+        messagingSenderId: "49675923395"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="js/saveToFirebase.js"></script>
+    <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
+    <script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="vendors/OwlCarousel/owl.carousel.min.js"></script>
+    <script src="vendors/sticky/jquery.sticky.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="vendors/Magnific-Popup/jquery.magnific-popup.min.js"></script> 
+    <script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    
 
 </body>
 </html>
